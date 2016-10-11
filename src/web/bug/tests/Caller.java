@@ -24,7 +24,6 @@ public class Caller
 			String charset = java.nio.charset.StandardCharsets.UTF_8.name();
 			int numberOfCalls = 5;
 			int sleepMS = 0;
-			String phrase = "TheBestSecretKey";
 			boolean testAnyway = true;
 			
 			// init BugInfo		
@@ -38,7 +37,7 @@ public class Caller
 			{
 				// if url is reachable, run tests
 				System.out.println("the url '"+url+"' is available.  starting call tests");
-				c.makeCalls(url, numberOfCalls, charset, sleepMS, phrase, bug);
+				c.makeCalls(url, numberOfCalls, charset, sleepMS, GeneralData.phrase, bug);
 			}
 			else
 			{

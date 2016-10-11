@@ -17,8 +17,6 @@ public class KeyManager
 	{
 		try
 		{
-			String secretKey = "TheBestSecretKey";
-			
 			String valToEnc = URLEncoder.encode("rid=1234,email=bdonges@whatcounts.com,fname=bill","UTF-8");
 			valToEnc = "rid=1234,email=bdonges@whatcounts.com,fname=bill";
 			
@@ -27,8 +25,8 @@ public class KeyManager
 			String e = "";
 			String d = "";
 			
-		 	e = k.encrypt(valToEnc, secretKey);
-		 	d = k.decrypt(e, secretKey);
+		 	e = k.encrypt(valToEnc, GeneralData.phrase);
+		 	d = k.decrypt(e, GeneralData.phrase);
 		 	
 			System.out.println("original:  " + valToEnc);
 			System.out.println("encrypted: " + e);
