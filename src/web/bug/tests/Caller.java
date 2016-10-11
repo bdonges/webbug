@@ -81,7 +81,7 @@ public class Caller
 				sb.append("siteId="+bug.siteId+",");
 				sb.append("sid="+(bug.sid + 1)+",");
 				sb.append("email="+bug.email+i+",");
-				sb.append("fname="+i+",");
+				sb.append("fname="+i);
 				String qry = sb.toString();
 				
 				// add query to url
